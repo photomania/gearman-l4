@@ -31,7 +31,7 @@ Configuration
 You can alter configuration options (such as server hostnames and ports) by publishing the config file.
 
 ```php
-php artisan config:publish conarwelsh/mustache-l4
+php artisan config:publish photomania/gearman-l4
 ```
 
 This will copy the default configuration file to `app/config/packages/photomania/gearman-l4/config.php`.
