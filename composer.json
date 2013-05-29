@@ -1,6 +1,7 @@
 {
     "name": "photomania/gearman-l4",
     "description": "a GearmanClient wrapper for Laravel 4",
+    "license": "MIT",
     "authors": [
         {
             "name": "Bar Ziony",
