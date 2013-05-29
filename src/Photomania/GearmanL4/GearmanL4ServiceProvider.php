@@ -50,7 +50,7 @@ class GearmanL4ServiceProvider extends ServiceProvider {
 	 */
 	public function provides()
 	{
-		return array();
+		return array('gearman.client');
 	}
 
 }
