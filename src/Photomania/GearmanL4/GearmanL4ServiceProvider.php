@@ -29,7 +29,8 @@ class GearmanL4ServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		$this->app['gearman.client'] = $this->app->share(
+		$this->app->singleton(
+			'gearman.client',
 			function ($app) {
 				$gearmanClient = new GearmanClient();
 				$servers = $app['config']->get('gearman-l4::servers');
@@ -41,6 +42,9 @@ class GearmanL4ServiceProvider extends ServiceProvider {
 				return $gearmanClient;
 			}
 		);
+
+		// Alias the class name itself to the instance, for IoC resolving through Reflection.
+		$this->app->singleton('GearmanClient', 'gearman.client');
 	}
 
 	/**
