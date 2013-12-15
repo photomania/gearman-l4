@@ -10,7 +10,7 @@
     ],
     "require": {
         "php": ">=5.3.0",
-        "illuminate/support": "4.0.x"
+        "illuminate/support": "4.*"
     },
     "suggest": {
         "ext-gearman": "The Gearman PECL extension is needed for this package to work, but is listed as suggested to allow `composer install` on development machines."
